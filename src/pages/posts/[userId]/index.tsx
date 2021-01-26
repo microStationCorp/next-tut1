@@ -2,7 +2,7 @@ import { NextPageContext } from "next";
 import Link from "next/link";
 import SinglePost from "../../../Component/Post/singlePost";
 import { PostInterface } from "../../../interfaces/Interface";
-
+import Head from "next/head"
 export default function UserPost({
   posts,
   userId,
@@ -12,6 +12,9 @@ export default function UserPost({
 }) {
   return (
     <>
+    <Head>
+      <title>Posts</title>
+    </Head>
       <div>
         <Link as={`/users/${userId}`} href="/users/[userId]">
           <a>go to user home</a>
