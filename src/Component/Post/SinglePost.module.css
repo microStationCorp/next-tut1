@@ -1,0 +1,12 @@
+.container {
+  margin: 10px;
+}
+
+.keyWord {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.resultContainer {
+  margin-left: 10px;
+}

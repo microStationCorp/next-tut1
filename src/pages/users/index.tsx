@@ -1,11 +1,20 @@
 import Link from "next/link";
+import Head from "next/head";
 import { PropsInterface, UserInterface } from "../../interfaces/Interface";
 
 export default function Users(props: PropsInterface) {
   const { users } = props;
   return (
     <>
-      <div>it is users page</div>
+      <Head>
+        <title>Users</title>
+      </Head>
+      <div>
+        <Link href="/">
+          <a>home page</a>
+        </Link>
+      </div>
+      <h2>it is users page</h2>
       <div>
         <ul>
           {users.map((u) => {
@@ -13,7 +22,7 @@ export default function Users(props: PropsInterface) {
               <li key={u.id}>
                 <div>
                   Name: {u.name}
-                  <Link as={`/users/${u.id}`} href="/users/[id]">
+                  <Link as={`/users/${u.id}`} href="/users/[userId]">
                     <a>go to</a>
                   </Link>
                 </div>
@@ -22,11 +31,7 @@ export default function Users(props: PropsInterface) {
           })}
         </ul>
       </div>
-      <div>
-        <Link href="/">
-          <a>home page</a>
-        </Link>
-      </div>
+      
     </>
   );
 }

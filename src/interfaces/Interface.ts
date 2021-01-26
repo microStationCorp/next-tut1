@@ -2,6 +2,12 @@ interface GeoInterface {
   lat: string;
   lng: string;
 }
+interface PostInterface {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
 
 interface AddressInterface {
   street: string;
@@ -37,4 +43,5 @@ export type {
   CompanyInterface,
   UserInterface,
   PropsInterface,
+  PostInterface,
 };
