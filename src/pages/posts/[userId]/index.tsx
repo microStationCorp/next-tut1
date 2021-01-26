@@ -41,7 +41,7 @@ UserPost.getInitialProps = async (ctx: NextPageContext) => {
   } = ctx;
 
   const res = await fetch(
-    `http://jsonplaceholder.typicode.com/posts?userId=${userId}`
+    `https://jsonplaceholder.typicode.com/posts?userId=${userId}`
   );
 
   const posts = (await res.json()) as PostInterface[];
